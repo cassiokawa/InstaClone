@@ -6,19 +6,75 @@
 //  Copyright (c) 2015 Cassio Kawakita. All rights reserved.
 //
 
-import UIKit
+import Parse
+import Bolts
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+        
+        
+        self.SetupParse()
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+      
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        var navigationController = UINavigationController()
+        var startViewController = StartViewController(nibName: "StartViewController", bundle: nil)
+        startViewController.view.backgroundColor=UIColor.yellowColor()
+        
+        if PFUser.currentUser()==nil{
+            //TODO: present the main UI
+            
+            navigationController.viewControllers = [startViewController]
+        
+        }
+        else
+        {
+        
+            //TODO: Present UI for logging in or signing Up
+            println("We have a user")
+        
+        }
+        
+        
+        
+        self.window!.rootViewController = navigationController
+        self.window!.makeKeyAndVisible()
+        
+       return true
+    }
+    
+    
+    func SetupParse()
+    {
+        // [Optional] Power your app with Local Datastore. For more info, go to
+        // https://parse.com/docs/ios_guide#localdatastore/iOS
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("uJl63LDEgfYJzPLkaHj2KJn2UBWMMCXnZaFNKlld",
+            clientKey: "e0DK20YmLPQSVckmvbiimfqFUgGaO06sjmySjUAD")
+        
+        
+        //  let testObject = PFObject(className: "TestObject")
+        //  testObject["foo"] = "bar"
+        //  testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+        //      println("Object has been saved.")
+    
+    
     }
 
+    
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

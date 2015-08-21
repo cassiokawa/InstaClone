@@ -8,11 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		566A61681B86ADC800BED4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A61671B86ADC800BED4E3 /* AppDelegate.swift */; };
-		566A616A1B86ADC800BED4E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A61691B86ADC800BED4E3 /* ViewController.swift */; };
-		566A616D1B86ADC800BED4E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566A616B1B86ADC800BED4E3 /* Main.storyboard */; };
 		566A616F1B86ADC800BED4E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566A616E1B86ADC800BED4E3 /* Images.xcassets */; };
 		566A61721B86ADC900BED4E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566A61701B86ADC900BED4E3 /* LaunchScreen.xib */; };
 		566A617E1B86ADC900BED4E3 /* InstaCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A617D1B86ADC900BED4E3 /* InstaCloneTests.swift */; };
+		567114D31B877252009EBD3E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114D11B877252009EBD3E /* Parse.framework */; };
+		567114D71B877357009EBD3E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114D61B877357009EBD3E /* Bolts.framework */; };
+		567114D91B877394009EBD3E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114D81B877394009EBD3E /* AudioToolbox.framework */; };
+		567114DB1B87739A009EBD3E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114DA1B87739A009EBD3E /* CFNetwork.framework */; };
+		567114DD1B8773A1009EBD3E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114DC1B8773A1009EBD3E /* CoreLocation.framework */; };
+		567114DF1B8773A9009EBD3E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114DE1B8773A9009EBD3E /* QuartzCore.framework */; };
+		567114E11B8773B1009EBD3E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114E01B8773B1009EBD3E /* Security.framework */; };
+		567114E31B8773B7009EBD3E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114E21B8773B7009EBD3E /* StoreKit.framework */; };
+		567114E51B8773BE009EBD3E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114E41B8773BE009EBD3E /* SystemConfiguration.framework */; };
+		567114E71B8773CB009EBD3E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114E61B8773CB009EBD3E /* libz.dylib */; };
+		567114E91B8773D6009EBD3E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114E81B8773D6009EBD3E /* libsqlite3.dylib */; };
+		567114EC1B877E97009EBD3E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567114EA1B877E97009EBD3E /* StartViewController.swift */; };
+		567114ED1B877E97009EBD3E /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567114EB1B877E97009EBD3E /* StartViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +40,24 @@
 		566A61621B86ADC800BED4E3 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		566A61661B86ADC800BED4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		566A61671B86ADC800BED4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		566A61691B86ADC800BED4E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		566A616C1B86ADC800BED4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		566A616E1B86ADC800BED4E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		566A61711B86ADC900BED4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		566A61771B86ADC900BED4E3 /* InstaCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		566A617C1B86ADC900BED4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		566A617D1B86ADC900BED4E3 /* InstaCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneTests.swift; sourceTree = "<group>"; };
+		567114D11B877252009EBD3E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../parse-library-1.8.1/Parse.framework"; sourceTree = "<group>"; };
+		567114D61B877357009EBD3E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../parse-library-1.8.1/Bolts.framework"; sourceTree = "<group>"; };
+		567114D81B877394009EBD3E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		567114DA1B87739A009EBD3E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		567114DC1B8773A1009EBD3E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		567114DE1B8773A9009EBD3E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		567114E01B8773B1009EBD3E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		567114E21B8773B7009EBD3E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		567114E41B8773BE009EBD3E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		567114E61B8773CB009EBD3E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		567114E81B8773D6009EBD3E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		567114EA1B877E97009EBD3E /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		567114EB1B877E97009EBD3E /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +65,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567114E91B8773D6009EBD3E /* libsqlite3.dylib in Frameworks */,
+				567114E71B8773CB009EBD3E /* libz.dylib in Frameworks */,
+				567114E51B8773BE009EBD3E /* SystemConfiguration.framework in Frameworks */,
+				567114E31B8773B7009EBD3E /* StoreKit.framework in Frameworks */,
+				567114E11B8773B1009EBD3E /* Security.framework in Frameworks */,
+				567114DF1B8773A9009EBD3E /* QuartzCore.framework in Frameworks */,
+				567114DD1B8773A1009EBD3E /* CoreLocation.framework in Frameworks */,
+				567114DB1B87739A009EBD3E /* CFNetwork.framework in Frameworks */,
+				567114D91B877394009EBD3E /* AudioToolbox.framework in Frameworks */,
+				567114D71B877357009EBD3E /* Bolts.framework in Frameworks */,
+				567114D31B877252009EBD3E /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,10 +111,11 @@
 			isa = PBXGroup;
 			children = (
 				566A61671B86ADC800BED4E3 /* AppDelegate.swift */,
-				566A61691B86ADC800BED4E3 /* ViewController.swift */,
-				566A616B1B86ADC800BED4E3 /* Main.storyboard */,
+				567114EA1B877E97009EBD3E /* StartViewController.swift */,
+				567114EB1B877E97009EBD3E /* StartViewController.xib */,
 				566A616E1B86ADC800BED4E3 /* Images.xcassets */,
 				566A61701B86ADC900BED4E3 /* LaunchScreen.xib */,
+				567114EE1B877EA7009EBD3E /* Frameworks */,
 				566A61651B86ADC800BED4E3 /* Supporting Files */,
 			);
 			path = InstaClone;
@@ -110,6 +144,25 @@
 				566A617C1B86ADC900BED4E3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		567114EE1B877EA7009EBD3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				567114E81B8773D6009EBD3E /* libsqlite3.dylib */,
+				567114E61B8773CB009EBD3E /* libz.dylib */,
+				567114E41B8773BE009EBD3E /* SystemConfiguration.framework */,
+				567114E21B8773B7009EBD3E /* StoreKit.framework */,
+				567114E01B8773B1009EBD3E /* Security.framework */,
+				567114DE1B8773A9009EBD3E /* QuartzCore.framework */,
+				567114DC1B8773A1009EBD3E /* CoreLocation.framework */,
+				567114DA1B87739A009EBD3E /* CFNetwork.framework */,
+				567114D81B877394009EBD3E /* AudioToolbox.framework */,
+				567114D61B877357009EBD3E /* Bolts.framework */,
+				567114D11B877252009EBD3E /* Parse.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				566A616D1B86ADC800BED4E3 /* Main.storyboard in Resources */,
 				566A61721B86ADC900BED4E3 /* LaunchScreen.xib in Resources */,
 				566A616F1B86ADC800BED4E3 /* Images.xcassets in Resources */,
+				567114ED1B877E97009EBD3E /* StartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				566A616A1B86ADC800BED4E3 /* ViewController.swift in Sources */,
 				566A61681B86ADC800BED4E3 /* AppDelegate.swift in Sources */,
+				567114EC1B877E97009EBD3E /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +289,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		566A616B1B86ADC800BED4E3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				566A616C1B86ADC800BED4E3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		566A61701B86ADC900BED4E3 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -340,6 +385,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/cassiokawakita/Desktop/projects_ios/parse-library-1.8.1",
+				);
 				INFOPLIST_FILE = InstaClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +399,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/cassiokawakita/Desktop/projects_ios/parse-library-1.8.1",
+				);
 				INFOPLIST_FILE = InstaClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +462,7 @@
 				566A61831B86ADC900BED4E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		566A61841B86ADC900BED4E3 /* Build configuration list for PBXNativeTarget "InstaCloneTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +471,7 @@
 				566A61861B86ADC900BED4E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

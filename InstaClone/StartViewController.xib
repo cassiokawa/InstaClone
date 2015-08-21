@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartViewController" customModule="InstaClone" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartViewControllerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="lmU-QP-HYo">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDd-Nz-ov5">
+                    <rect key="frame" x="10" y="473" width="580" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="k1r-dj-Li7"/>
+                    </constraints>
+                    <state key="normal" title="Sign Up">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXr-K1-64O">
+                    <rect key="frame" x="10" y="546" width="580" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="BYY-fh-bPK"/>
+                    </constraints>
+                    <state key="normal" title="Sign In">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lmU-QP-HYo" secondAttribute="trailing" id="5rx-d4-gb5"/>
+                <constraint firstAttribute="bottom" secondItem="lmU-QP-HYo" secondAttribute="bottom" id="XmX-nK-Fxv"/>
+                <constraint firstItem="hXr-K1-64O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="YZL-ji-iDZ"/>
+                <constraint firstItem="lmU-QP-HYo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bBW-ck-2NP"/>
+                <constraint firstAttribute="trailing" secondItem="hXr-K1-64O" secondAttribute="trailing" constant="10" id="bfi-gc-M2n"/>
+                <constraint firstItem="lmU-QP-HYo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fkc-Rg-hK6"/>
+                <constraint firstAttribute="bottom" secondItem="PDd-Nz-ov5" secondAttribute="bottom" constant="83" id="nII-df-Kcg"/>
+                <constraint firstItem="PDd-Nz-ov5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="su2-aN-vZm"/>
+                <constraint firstItem="PDd-Nz-ov5" firstAttribute="centerX" secondItem="lmU-QP-HYo" secondAttribute="centerX" id="vff-9h-4BU"/>
+                <constraint firstAttribute="bottom" secondItem="hXr-K1-64O" secondAttribute="bottom" constant="10" id="yMh-42-Cf0"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="StartViewControllerBackground" width="640" height="960"/>
+    </resources>
+</document>
