@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="InstaClone" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="cKz-OT-lVz" id="2Oz-tY-Cbl"/>
+                <outlet property="passwordTextField" destination="Vg1-kF-GRY" id="fh9-Sn-gO9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKz-OT-lVz">
+                    <rect key="frame" x="10" y="10" width="580" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Z0Z-vU-FBp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="3e2-zs-Ohq"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vg1-kF-GRY">
+                    <rect key="frame" x="10" y="56" width="580" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="o71-gF-Yx2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="OG0-OE-rPw"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Vg1-kF-GRY" firstAttribute="leading" secondItem="cKz-OT-lVz" secondAttribute="leading" id="Qop-IJ-Lhi"/>
+                <constraint firstItem="Vg1-kF-GRY" firstAttribute="trailing" secondItem="cKz-OT-lVz" secondAttribute="trailing" id="Yti-9a-oFh"/>
+                <constraint firstAttribute="trailing" secondItem="cKz-OT-lVz" secondAttribute="trailing" constant="10" id="oSe-yU-aDT"/>
+                <constraint firstItem="Vg1-kF-GRY" firstAttribute="top" secondItem="cKz-OT-lVz" secondAttribute="bottom" constant="2" id="rEi-62-hqi"/>
+                <constraint firstItem="cKz-OT-lVz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="uq3-EF-SF3"/>
+                <constraint firstItem="cKz-OT-lVz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="wbZ-qz-AWv"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

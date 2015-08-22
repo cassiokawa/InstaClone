@@ -24,6 +24,9 @@
 		567114E91B8773D6009EBD3E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 567114E81B8773D6009EBD3E /* libsqlite3.dylib */; };
 		567114EC1B877E97009EBD3E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567114EA1B877E97009EBD3E /* StartViewController.swift */; };
 		567114ED1B877E97009EBD3E /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567114EB1B877E97009EBD3E /* StartViewController.xib */; };
+		567114F11B878BC2009EBD3E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567114EF1B878BC2009EBD3E /* AuthViewController.swift */; };
+		567114F21B878BC2009EBD3E /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567114F01B878BC2009EBD3E /* AuthViewController.xib */; };
+		56E35FD51B87EF5F00D283DC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E35FD41B87EF5F00D283DC /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		560E83B41B88CC09001B0B8C /* InstaClone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaClone-Bridging-Header.h"; sourceTree = "<group>"; };
 		566A61621B86ADC800BED4E3 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		566A61661B86ADC800BED4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		566A61671B86ADC800BED4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		566A616E1B86ADC800BED4E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		566A616E1B86ADC800BED4E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = InstaClone/Images.xcassets; sourceTree = "<group>"; };
 		566A61711B86ADC900BED4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		566A61771B86ADC900BED4E3 /* InstaCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		566A617C1B86ADC900BED4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +62,9 @@
 		567114E81B8773D6009EBD3E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		567114EA1B877E97009EBD3E /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		567114EB1B877E97009EBD3E /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		567114EF1B878BC2009EBD3E /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		567114F01B878BC2009EBD3E /* AuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		56E35FD41B87EF5F00D283DC /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				566A61641B86ADC800BED4E3 /* InstaClone */,
+				566A616E1B86ADC800BED4E3 /* Images.xcassets */,
+				566A61701B86ADC900BED4E3 /* LaunchScreen.xib */,
 				566A617A1B86ADC900BED4E3 /* InstaCloneTests */,
 				566A61631B86ADC800BED4E3 /* Products */,
 			);
@@ -111,12 +120,11 @@
 			isa = PBXGroup;
 			children = (
 				566A61671B86ADC800BED4E3 /* AppDelegate.swift */,
-				567114EA1B877E97009EBD3E /* StartViewController.swift */,
-				567114EB1B877E97009EBD3E /* StartViewController.xib */,
-				566A616E1B86ADC800BED4E3 /* Images.xcassets */,
-				566A61701B86ADC900BED4E3 /* LaunchScreen.xib */,
+				567114F31B878BD2009EBD3E /* ViewControllers */,
 				567114EE1B877EA7009EBD3E /* Frameworks */,
+				56E35FD31B87EF0F00D283DC /* Extensions */,
 				566A61651B86ADC800BED4E3 /* Supporting Files */,
+				560E83B41B88CC09001B0B8C /* InstaClone-Bridging-Header.h */,
 			);
 			path = InstaClone;
 			sourceTree = "<group>";
@@ -163,6 +171,25 @@
 			);
 			name = Frameworks;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		567114F31B878BD2009EBD3E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				567114EA1B877E97009EBD3E /* StartViewController.swift */,
+				567114EB1B877E97009EBD3E /* StartViewController.xib */,
+				567114EF1B878BC2009EBD3E /* AuthViewController.swift */,
+				567114F01B878BC2009EBD3E /* AuthViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		56E35FD31B87EF0F00D283DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56E35FD41B87EF5F00D283DC /* String+Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567114F21B878BC2009EBD3E /* AuthViewController.xib in Resources */,
 				566A61721B86ADC900BED4E3 /* LaunchScreen.xib in Resources */,
 				566A616F1B86ADC800BED4E3 /* Images.xcassets in Resources */,
 				567114ED1B877E97009EBD3E /* StartViewController.xib in Resources */,
@@ -265,7 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E35FD51B87EF5F00D283DC /* String+Extensions.swift in Sources */,
 				566A61681B86ADC800BED4E3 /* AppDelegate.swift in Sources */,
+				567114F11B878BC2009EBD3E /* AuthViewController.swift in Sources */,
 				567114EC1B877E97009EBD3E /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +325,7 @@
 				566A61711B86ADC900BED4E3 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = InstaClone;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -385,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/cassiokawakita/Desktop/projects_ios/parse-library-1.8.1",
@@ -392,6 +424,8 @@
 				INFOPLIST_FILE = InstaClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstaClone/InstaClone-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -399,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/cassiokawakita/Desktop/projects_ios/parse-library-1.8.1",
@@ -406,6 +441,7 @@
 				INFOPLIST_FILE = InstaClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstaClone/InstaClone-Bridging-Header.h";
 			};
 			name = Release;
 		};

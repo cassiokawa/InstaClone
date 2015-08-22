@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         self.SetupParse()
+        self.setupAppAppearance();
         
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
@@ -29,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var navigationController = UINavigationController()
         var startViewController = StartViewController(nibName: "StartViewController", bundle: nil)
-        startViewController.view.backgroundColor=UIColor.yellowColor()
+        // startViewController.view.backgroundColor=UIColor.yellowColor()
         
         if PFUser.currentUser()==nil{
             //TODO: present the main UI
@@ -51,6 +52,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.makeKeyAndVisible()
         
        return true
+    }
+    
+    func setupAppAppearance()
+    {
+    
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UINavigationBar.appearance().barTintColor = UIColor.blackColor()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()   
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor() ]
+    
     }
     
     
