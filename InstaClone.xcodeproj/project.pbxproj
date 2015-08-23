@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560E83B81B88D7BC001B0B8C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560E83B71B88D7BC001B0B8C /* TabBarController.swift */; };
 		566A61681B86ADC800BED4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A61671B86ADC800BED4E3 /* AppDelegate.swift */; };
 		566A616F1B86ADC800BED4E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566A616E1B86ADC800BED4E3 /* Images.xcassets */; };
 		566A61721B86ADC900BED4E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566A61701B86ADC900BED4E3 /* LaunchScreen.xib */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		560E83B41B88CC09001B0B8C /* InstaClone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaClone-Bridging-Header.h"; sourceTree = "<group>"; };
+		560E83B71B88D7BC001B0B8C /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		566A61621B86ADC800BED4E3 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		566A61661B86ADC800BED4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		566A61671B86ADC800BED4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				567114EB1B877E97009EBD3E /* StartViewController.xib */,
 				567114EF1B878BC2009EBD3E /* AuthViewController.swift */,
 				567114F01B878BC2009EBD3E /* AuthViewController.xib */,
+				560E83B71B88D7BC001B0B8C /* TabBarController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				56E35FD51B87EF5F00D283DC /* String+Extensions.swift in Sources */,
 				566A61681B86ADC800BED4E3 /* AppDelegate.swift in Sources */,
 				567114F11B878BC2009EBD3E /* AuthViewController.swift in Sources */,
+				560E83B81B88D7BC001B0B8C /* TabBarController.swift in Sources */,
 				567114EC1B877E97009EBD3E /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

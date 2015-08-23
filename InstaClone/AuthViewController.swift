@@ -122,7 +122,9 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             
             if(user != nil)
             {
-                println("sign in success!")
+                var tabBarController = TabBarController()
+                self.navigationController?.pushViewController(tabBarController, animated: true)
+
             }
             
             else
@@ -144,7 +146,8 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             (succeeded, error) -> Void in
             if error == nil
             {
-                println("sign in success!")
+                var tabBarController = TabBarController()
+                self.navigationController?.pushViewController(tabBarController, animated: true)
             }
                 
             else

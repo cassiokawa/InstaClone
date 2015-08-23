@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // startViewController.view.backgroundColor=UIColor.yellowColor()
         
         if PFUser.currentUser()==nil{
-            //TODO: present the main UI
+            
             
             navigationController.viewControllers = [startViewController]
         
@@ -41,8 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else
         {
         
-            //TODO: Present UI for logging in or signing Up
-            println("We have a user")
+            var tabBarController = TabBarController()
+            navigationController.viewControllers = [startViewController, tabBarController]
         
         }
         
@@ -61,7 +61,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.blackColor()
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()   
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor() ]
-    
+        
+        UITabBar.appearance().barTintColor = UIColor.blackColor()
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
     }
     
     
