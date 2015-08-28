@@ -15,8 +15,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var feedViewController = UIViewController()
-        feedViewController.view.backgroundColor = UIColor.orangeColor()
+        var feedViewController = FeedViewController(nibName: "FeedViewController", bundle: nil )
         
         
         var profileViewController = UIViewController()
@@ -32,17 +31,22 @@ class TabBarController: UITabBarController {
         
         var viewControllers = [ feedViewController, profileViewController, findPeopleViewController, cameraViewController ]
         self.setViewControllers(viewControllers, animated: true )
-        
+        var imageNames = ["FeedIcon", "ProfileIcon", "SearchIcon", "CameraIcon"]
+
         
         let tabItems = tabBar.items as! [UITabBarItem]
         for (index, value) in enumerate(tabItems)
             {
-                value.title =  "hi"
+                var imageName = imageNames[index]
+                value.image =  UIImage(named: imageName)
+                value.imageInsets = UIEdgeInsetsMake( 5.0, 0, -5.0, 0)
             }
         
         self.edgesForExtendedLayout = UIRectEdge.None
         self.navigationItem.hidesBackButton = true
         self.tabBar.translucent = false
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .Done, target: self, action: "didTapSignOut:")
         
         
         }
@@ -64,6 +68,11 @@ class TabBarController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func didTapSignOut(sender: AnyObject)
+    {
+        PFUser.logOut()
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
   
 }
