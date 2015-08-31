@@ -8,6 +8,10 @@
 
 import Foundation
 
+typealias ErrorCompletionHandler = (error: NSError?) -> ()
+typealias ObjectsCompletionHandler = (objects: [AnyObject]!, error: NSError?) -> ()
+typealias ImageCompletionHandler = (image: UIImage?, error: NSError?) -> ()
+
 public class NetworkManager
 {
     public class var sharedInstance:  NetworkManager
@@ -36,16 +40,17 @@ public class NetworkManager
     
     
     
-    func fetchFeed(completionHandler: (objects: [AnyObject]?, error: NSError?) -> ())
+    func fetchFeed(completionHandler: ObjectsCompletionHandler!)
     {
         var relation = PFUser.currentUser()!.relationForKey("following")
         var query = relation.query()
-        query!.findObjectsInBackgroundWithBlock({(objects:[AnyObject]?, error:NSError?) -> Void in
+        query!.findObjectsInBackgroundWithBlock {(objects: [AnyObject]?, error: NSError?) -> Void in
             
-            if let constError = error
+            if (error != nil)
             {
                 println("error fetching following")
-                completionHandler(objects: nil, error: constError)
+                
+                completionHandler(objects: nil, error: error!)
             }
             else
             {
@@ -59,13 +64,39 @@ public class NetworkManager
                         completionHandler(objects: nil, error: error)
                     } else {
                         println("Success fetching feed posts \(objects)")
-                        completionHandler(objects: objects, error: nil)
+                        completionHandler(objects: objects!, error: nil)
                     }
                     
                 })
             }
             
-        })
+        }
     }
-}
+    
+    
+    
+    func fetchImage(post: PFObject, completionHandler: ImageCompletionHandler)
+    {
+        var imageReference = post["Image"] as? PFFile
+        imageReference?.getDataInBackgroundWithBlock{
+                (data, error) -> Void in
+                
+                if (error != nil)
+                {
+                    println("Error fetching image \(error!.localizedDescription)")
+                    completionHandler(image: nil, error: error)
+                }
+                else
+                {
+                    println(" we downloaded the image")
+                    let image = UIImage(data: data!)
+                    completionHandler(image:image, error: nil)
+                }
+            }
+        }
+    }
+    
+    
+    
+
 

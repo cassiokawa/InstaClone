@@ -11,6 +11,7 @@
 		560E83BA1B8CC218001B0B8C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560E83B91B8CC218001B0B8C /* NetworkManager.swift */; };
 		5660CF051B908849001689FE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660CF031B908849001689FE /* PostCell.swift */; };
 		5660CF061B908849001689FE /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5660CF041B908849001689FE /* PostCell.xib */; };
+		5660CF081B911399001689FE /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660CF071B911399001689FE /* NSDate+Extensions.swift */; };
 		566A61681B86ADC800BED4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A61671B86ADC800BED4E3 /* AppDelegate.swift */; };
 		566A616F1B86ADC800BED4E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566A616E1B86ADC800BED4E3 /* Images.xcassets */; };
 		566A61721B86ADC900BED4E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566A61701B86ADC900BED4E3 /* LaunchScreen.xib */; };
@@ -51,6 +52,7 @@
 		560E83B91B8CC218001B0B8C /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5660CF031B908849001689FE /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5660CF041B908849001689FE /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		5660CF071B911399001689FE /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
 		566A61621B86ADC800BED4E3 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		566A61661B86ADC800BED4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		566A61671B86ADC800BED4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				56E35FD41B87EF5F00D283DC /* String+Extensions.swift */,
+				5660CF071B911399001689FE /* NSDate+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				560E83BA1B8CC218001B0B8C /* NetworkManager.swift in Sources */,
 				56E35FD51B87EF5F00D283DC /* String+Extensions.swift in Sources */,
 				566A61681B86ADC800BED4E3 /* AppDelegate.swift in Sources */,
+				5660CF081B911399001689FE /* NSDate+Extensions.swift in Sources */,
 				567114F11B878BC2009EBD3E /* AuthViewController.swift in Sources */,
 				560E83B81B88D7BC001B0B8C /* TabBarController.swift in Sources */,
 				567114EC1B877E97009EBD3E /* StartViewController.swift in Sources */,
