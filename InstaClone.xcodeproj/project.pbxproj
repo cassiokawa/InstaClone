@@ -12,6 +12,7 @@
 		5660CF051B908849001689FE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660CF031B908849001689FE /* PostCell.swift */; };
 		5660CF061B908849001689FE /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5660CF041B908849001689FE /* PostCell.xib */; };
 		5660CF081B911399001689FE /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660CF071B911399001689FE /* NSDate+Extensions.swift */; };
+		5660CF0A1B9544CD001689FE /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660CF091B9544CD001689FE /* UIColor+Extensions.swift */; };
 		566A61681B86ADC800BED4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A61671B86ADC800BED4E3 /* AppDelegate.swift */; };
 		566A616F1B86ADC800BED4E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566A616E1B86ADC800BED4E3 /* Images.xcassets */; };
 		566A61721B86ADC900BED4E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566A61701B86ADC900BED4E3 /* LaunchScreen.xib */; };
@@ -31,6 +32,8 @@
 		567114ED1B877E97009EBD3E /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567114EB1B877E97009EBD3E /* StartViewController.xib */; };
 		567114F11B878BC2009EBD3E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567114EF1B878BC2009EBD3E /* AuthViewController.swift */; };
 		567114F21B878BC2009EBD3E /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567114F01B878BC2009EBD3E /* AuthViewController.xib */; };
+		5683370F1B961204009284D0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5683370D1B961204009284D0 /* SearchViewController.swift */; };
+		568337101B961204009284D0 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5683370E1B961204009284D0 /* SearchViewController.xib */; };
 		568848991B8CC68500D8682D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568848971B8CC68500D8682D /* FeedViewController.swift */; };
 		5688489A1B8CC68500D8682D /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 568848981B8CC68500D8682D /* FeedViewController.xib */; };
 		56E35FD51B87EF5F00D283DC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E35FD41B87EF5F00D283DC /* String+Extensions.swift */; };
@@ -53,6 +56,7 @@
 		5660CF031B908849001689FE /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5660CF041B908849001689FE /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		5660CF071B911399001689FE /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
+		5660CF091B9544CD001689FE /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		566A61621B86ADC800BED4E3 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		566A61661B86ADC800BED4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		566A61671B86ADC800BED4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		567114EB1B877E97009EBD3E /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		567114EF1B878BC2009EBD3E /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		567114F01B878BC2009EBD3E /* AuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		5683370D1B961204009284D0 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5683370E1B961204009284D0 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		568848971B8CC68500D8682D /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		568848981B8CC68500D8682D /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		56E35FD41B87EF5F00D283DC /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -195,9 +201,11 @@
 				567114EB1B877E97009EBD3E /* StartViewController.xib */,
 				567114EF1B878BC2009EBD3E /* AuthViewController.swift */,
 				567114F01B878BC2009EBD3E /* AuthViewController.xib */,
-				560E83B71B88D7BC001B0B8C /* TabBarController.swift */,
 				568848981B8CC68500D8682D /* FeedViewController.xib */,
 				568848971B8CC68500D8682D /* FeedViewController.swift */,
+				560E83B71B88D7BC001B0B8C /* TabBarController.swift */,
+				5683370D1B961204009284D0 /* SearchViewController.swift */,
+				5683370E1B961204009284D0 /* SearchViewController.xib */,
 				5660CF031B908849001689FE /* PostCell.swift */,
 				5660CF041B908849001689FE /* PostCell.xib */,
 			);
@@ -209,6 +217,7 @@
 			children = (
 				56E35FD41B87EF5F00D283DC /* String+Extensions.swift */,
 				5660CF071B911399001689FE /* NSDate+Extensions.swift */,
+				5660CF091B9544CD001689FE /* UIColor+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +308,7 @@
 				566A61721B86ADC900BED4E3 /* LaunchScreen.xib in Resources */,
 				566A616F1B86ADC800BED4E3 /* Images.xcassets in Resources */,
 				567114ED1B877E97009EBD3E /* StartViewController.xib in Resources */,
+				568337101B961204009284D0 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +327,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				560E83BA1B8CC218001B0B8C /* NetworkManager.swift in Sources */,
+				5683370F1B961204009284D0 /* SearchViewController.swift in Sources */,
+				5660CF0A1B9544CD001689FE /* UIColor+Extensions.swift in Sources */,
 				56E35FD51B87EF5F00D283DC /* String+Extensions.swift in Sources */,
 				566A61681B86ADC800BED4E3 /* AppDelegate.swift in Sources */,
 				5660CF081B911399001689FE /* NSDate+Extensions.swift in Sources */,
