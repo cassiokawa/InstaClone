@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="InstaClone" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="uCI-6I-i5S" id="m1k-bz-pYd"/>
+                <outlet property="tableView" destination="lPE-tn-TTj" id="VE4-cV-2Ls"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,32 +16,99 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lPE-tn-TTj">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lPE-tn-TTj">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="44" width="400" height="600"/>
-                    </variation>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dAb-ys-002"/>
+                    </connections>
                 </tableView>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uCI-6I-i5S">
+                <searchBar contentMode="redraw" placeholder="Search users" translatesAutoresizingMaskIntoConstraints="NO" id="uCI-6I-i5S">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="DCd-pd-fNQ"/>
+                    </constraints>
                     <textInputTraits key="textInputTraits"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="DCd-pd-fNQ"/>
+                        </mask>
                     </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="DCd-pd-fNQ"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="P0w-Vk-PpF"/>
+                    </connections>
                 </searchBar>
             </subviews>
             <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lPE-tn-TTj" secondAttribute="trailing" id="2o7-rh-zIe"/>
+                <constraint firstItem="lPE-tn-TTj" firstAttribute="top" secondItem="uCI-6I-i5S" secondAttribute="bottom" id="5oB-Eq-0nE"/>
+                <constraint firstItem="uCI-6I-i5S" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7ef-sf-Jl4"/>
+                <constraint firstItem="lPE-tn-TTj" firstAttribute="top" secondItem="uCI-6I-i5S" secondAttribute="bottom" id="DVk-e5-tQf"/>
+                <constraint firstAttribute="trailing" secondItem="uCI-6I-i5S" secondAttribute="trailing" id="HU4-Yn-D6R"/>
+                <constraint firstAttribute="trailing" secondItem="lPE-tn-TTj" secondAttribute="trailing" id="LJ7-AQ-QSj"/>
+                <constraint firstItem="lPE-tn-TTj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PPz-DE-9jZ"/>
+                <constraint firstItem="uCI-6I-i5S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PbF-Lq-UiC"/>
+                <constraint firstItem="lPE-tn-TTj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RUX-HL-8cL"/>
+                <constraint firstAttribute="trailing" secondItem="lPE-tn-TTj" secondAttribute="trailing" constant="25" id="TTo-ls-kb6"/>
+                <constraint firstAttribute="trailing" secondItem="lPE-tn-TTj" secondAttribute="trailing" id="Xzm-Jg-eGX"/>
+                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="lPE-tn-TTj" secondAttribute="trailing" constant="25" id="Zco-pf-1nI"/>
+                <constraint firstAttribute="bottom" secondItem="lPE-tn-TTj" secondAttribute="bottom" id="lvu-j2-mDM"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lPE-tn-TTj" secondAttribute="trailing" constant="25" id="od2-h7-IgB"/>
+                <constraint firstItem="lPE-tn-TTj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="thp-QV-lek"/>
+                <constraint firstItem="lPE-tn-TTj" firstAttribute="top" secondItem="uCI-6I-i5S" secondAttribute="bottom" id="z48-hz-Csc"/>
+            </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="lPE-tn-TTj"/>
                     <exclude reference="uCI-6I-i5S"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="7ef-sf-Jl4"/>
+                    <exclude reference="HU4-Yn-D6R"/>
+                    <exclude reference="PbF-Lq-UiC"/>
+                    <exclude reference="2o7-rh-zIe"/>
+                    <exclude reference="5oB-Eq-0nE"/>
+                    <exclude reference="DVk-e5-tQf"/>
+                    <exclude reference="LJ7-AQ-QSj"/>
+                    <exclude reference="PPz-DE-9jZ"/>
+                    <exclude reference="RUX-HL-8cL"/>
+                    <exclude reference="TTo-ls-kb6"/>
+                    <exclude reference="Xzm-Jg-eGX"/>
+                    <exclude reference="Zco-pf-1nI"/>
+                    <exclude reference="lvu-j2-mDM"/>
+                    <exclude reference="od2-h7-IgB"/>
+                    <exclude reference="thp-QV-lek"/>
+                    <exclude reference="z48-hz-Csc"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="lPE-tn-TTj"/>
                     <include reference="uCI-6I-i5S"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="7ef-sf-Jl4"/>
+                    <include reference="HU4-Yn-D6R"/>
+                    <include reference="PbF-Lq-UiC"/>
+                    <include reference="2o7-rh-zIe"/>
+                    <include reference="5oB-Eq-0nE"/>
+                    <include reference="DVk-e5-tQf"/>
+                    <include reference="LJ7-AQ-QSj"/>
+                    <include reference="PPz-DE-9jZ"/>
+                    <include reference="RUX-HL-8cL"/>
+                    <include reference="TTo-ls-kb6"/>
+                    <include reference="Xzm-Jg-eGX"/>
+                    <include reference="Zco-pf-1nI"/>
+                    <include reference="lvu-j2-mDM"/>
+                    <include reference="od2-h7-IgB"/>
+                    <include reference="thp-QV-lek"/>
+                    <include reference="z48-hz-Csc"/>
                 </mask>
             </variation>
         </view>
