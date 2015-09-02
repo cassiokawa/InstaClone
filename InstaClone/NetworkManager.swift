@@ -11,6 +11,7 @@ import Foundation
 typealias ErrorCompletionHandler = (error: NSError?) -> ()
 typealias ObjectsCompletionHandler = (objects: [AnyObject]!, error: NSError?) -> ()
 typealias ImageCompletionHandler = (image: UIImage?, error: NSError?) -> ()
+typealias BooleanCompletionHandler = (isFollowing: Bool?, error: NSError?) -> ()
 
 public class NetworkManager
 {
@@ -119,6 +120,105 @@ public class NetworkManager
             
         }
         
+    }
+    
+    
+    
+    func isFollowing(user: PFUser!, completionHandler: BooleanCompletionHandler)
+    {
+        var relation = PFUser.currentUser()!.relationForKey("following")
+        var query = relation.query()
+        query!.whereKey("username", equalTo: user.username!)
+        query!.findObjectsInBackgroundWithBlock {
+            (objects, error) -> Void in
+            
+            if error != nil
+            {
+                println("error determining if currentuser follows other user")
+                completionHandler(isFollowing: false, error: error)
+            }
+            else
+            {
+                //println(objects)
+                var isFollowing = objects!.count > 0
+                completionHandler(isFollowing: isFollowing, error: nil)
+            }
+            
+        }
+    }
+    
+    
+    func updateFollowValue(value: Bool, user: PFUser!, completionHandler: ErrorCompletionHandler)
+    {
+        var relation = PFUser.currentUser()!.relationForKey("following")
+        
+        if (value == true)
+        {
+            relation.addObject(user)
+        }
+        else
+        {
+            relation.removeObject(user)
+        }
+        
+        PFUser.currentUser()!.saveInBackgroundWithBlock {
+            (success, error) -> Void in
+            
+            if error != nil
+            {
+                println("Error following/unfollowing user")
+                
+            }
+            
+            completionHandler(error: error)
+        }
+    }
+    
+    
+    func fetchPosts(user: PFUser, completionHandler: ObjectsCompletionHandler)
+    {
+        var postQuery = PFQuery(className: "Post")
+        postQuery.whereKey("User", equalTo: user)
+        postQuery.orderByDescending("createdAt")
+        postQuery.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]?, error: NSError?) -> Void in
+            
+            if (error != nil)
+            {
+                println("error fetching feed posts)")
+                completionHandler(objects: nil, error: error!)
+            }
+            else
+            {
+                completionHandler(objects: objects!, error: nil)
+            }
+            
+        })
+    }
+    
+    
+    func postImage(image: UIImage, completionHandler: ErrorCompletionHandler?)
+    {
+        var imageData = UIImagePNGRepresentation(image) // returns NSData
+        var imageFile = PFFile(name: "image.png", data: imageData)
+        
+        var post = PFObject(className: "Post")
+        post["Image"] = imageFile
+        post["User"] = PFUser.currentUser()
+        
+        post.saveInBackgroundWithBlock {
+            (success, error) -> Void in
+            
+            if let constError = error
+            {
+                println("Error uploading post object")
+            }
+            
+            if let constCompletionHandler = completionHandler
+            {
+                constCompletionHandler(error: error)
+            }
+            
+        }
     }
     
     

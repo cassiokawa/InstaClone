@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -14,17 +15,54 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6W2-xl-fcY">
-                        <rect key="frame" x="266" y="0.0" width="54" height="43"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iP8-m9-9aq">
+                        <rect key="frame" x="197" y="-6" width="137" height="56"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="iP8-m9-9aq" secondAttribute="height" multiplier="15:7" id="1Oh-zd-gLi"/>
+                            <constraint firstAttribute="height" priority="750" constant="57" id="Ay7-9V-Xxf"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="Nl9-RU-SBV"/>
+                            <constraint firstAttribute="width" constant="189" id="atG-Xb-uBX"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="43" id="cNo-gO-qgX"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="56" id="zg7-ku-mch"/>
+                        </constraints>
+                        <state key="normal" image="FollowButton">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1Oh-zd-gLi"/>
+                                <exclude reference="Ay7-9V-Xxf"/>
+                                <exclude reference="Nl9-RU-SBV"/>
+                                <exclude reference="atG-Xb-uBX"/>
+                                <exclude reference="cNo-gO-qgX"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="didTapFollow:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kAc-9h-Tda"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="6W2-xl-fcY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="0dC-WO-Y8A"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="6W2-xl-fcY" secondAttribute="bottom" constant="-8" id="gRA-0w-ndf"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="6W2-xl-fcY" secondAttribute="trailing" constant="-8" id="kYO-6B-m00"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iP8-m9-9aq" secondAttribute="trailing" constant="-48" id="FDs-ok-5NY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iP8-m9-9aq" secondAttribute="trailing" constant="-8" id="FSI-Ai-59E"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iP8-m9-9aq" secondAttribute="trailing" priority="750" constant="-14" id="Ijy-c4-l0P"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iP8-m9-9aq" secondAttribute="trailing" constant="-8" id="xEL-fh-iVM"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="FDs-ok-5NY"/>
+                        <exclude reference="FSI-Ai-59E"/>
+                        <exclude reference="xEL-fh-iVM"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="followButton" destination="iP8-m9-9aq" id="4ug-tq-XmX"/>
+            </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="FollowButton" width="109" height="57"/>
+    </resources>
 </document>
